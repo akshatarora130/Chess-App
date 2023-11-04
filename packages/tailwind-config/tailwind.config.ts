@@ -4,10 +4,22 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "glow-conic":
-          "conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #e92a67 360deg)",
+      backgroundColor: {
+        "loginPageBg": "#302e2b",
+        "loginBoxBg" : "#262421",
+        "loginInputBox" : "#3d3937",
+        "loginButton": "#80b64b",
+        "loginBottom": "#211f1c",
+
+        "signupPageBg": "#302e2b",
+        "signupButton": "#80b64b",
+        "signupGoogle": "#262522",
+        "signupApple": "#262522",
+        "signupLevelButton": "#3d3937",
       },
+      borderColor: {
+        "signupLevel": "#80b64b"
+      }
     },
   },
   plugins: [],

@@ -18,5 +18,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "next-auth": "^4.24.4"
+  }
 }
