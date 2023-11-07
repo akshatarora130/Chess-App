@@ -1,1 +1,1 @@
-import mongoose from "mongoose"
+export * from '@prisma/client';

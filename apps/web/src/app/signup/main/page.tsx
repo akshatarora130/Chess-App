@@ -1,14 +1,39 @@
 "use client"
 
 import {Signup} from "ui";
+import {useRouter} from "next/navigation";
 
 const MainSignupPage = () =>{
-    const signupButton = (username, email, password, level ) => {
-        alert(username);
-        alert(email);
-        alert(password);
-        alert(level);
-    }
+    const router = useRouter();
+    const signupButton = async (username, email, password, level) => {
+        if (!username || !email || !password) {
+            alert("Fill all the required fields");
+            return;
+        }
+
+        try {
+            const response = await fetch("/api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ username, email, password, level }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert("User created successfully");
+                router.push("/login");
+                console.log(data);
+            } else {
+                alert("User registration failed");
+                console.error("User registration failed");
+            }
+        } catch (error) {
+            alert("An error occurred while registering the user");
+            console.error("An error occurred", error);
+        }
+    };
 
     return(
         <>

@@ -9,15 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "db": "*",
     "next": "^13.4.19",
     "next-auth": "^4.24.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "*",
-    "db": "*"
+    "ui": "*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^18.11.17",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.4",

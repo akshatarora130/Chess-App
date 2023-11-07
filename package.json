@@ -11,6 +11,7 @@
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.3",
+    "prisma": "^5.5.2",
     "tsconfig": "*",
     "turbo": "latest"
   },
@@ -20,6 +21,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "mongoose": "^8.0.0",
     "next-auth": "^4.24.4"
   }
